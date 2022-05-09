@@ -17,7 +17,14 @@ spring:
         port: 8719   #默认将调用链路收敛
       filter:
         enabled: false
-
+      datasource:
+        ds1:
+          nacos:
+            server-addr: localhost:8848
+            dataId: cloudalibaba-sentinel-service
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
 
 management:
   endpoints:
